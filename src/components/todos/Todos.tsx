@@ -16,7 +16,7 @@ export const Todos: FC<TodosProps> = ({ todosList, onDelete }) => {
   //
   const onClickHandler = (index:number) => {
     onDelete((state) => {
-      return state.filter((todo) => todo !== todosList[index]);
+      return state.filter((__, i) => i !== index);
     });
   };
 
