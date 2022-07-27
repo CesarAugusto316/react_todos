@@ -14,7 +14,7 @@ interface TodosProps {
 
 export const Todos: FC<TodosProps> = ({ todosList, onDelete }) => {
   //
-  const onClickHandler = (index:number) => {
+  const clickHandler = (index:number) => {
     onDelete((state) => {
       return state.filter((__, i) => i !== index);
     });
@@ -32,10 +32,9 @@ export const Todos: FC<TodosProps> = ({ todosList, onDelete }) => {
             <div className="todo-item__text">
               <p>{todo}</p>
             </div>
-            <span />
             <FaTrashAlt
               className="todo-item__icon"
-              onClick={() => onClickHandler(index)}
+              onClick={() => clickHandler(index)}
             />
           </div>
         );

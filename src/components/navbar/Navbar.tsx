@@ -7,7 +7,7 @@ export const Navbar: FC = () => {
   return (
     <nav className="navbar">
       <FaStream className="navbar__icon" />
-      <h2>To-Do List</h2>
+      <h2>ToDo List</h2>
       <FaFontAwesomeFlag className="navbar__icon" />
     </nav>
   );

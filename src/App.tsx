@@ -1,14 +1,10 @@
-import { FC, useEffect, useState } from 'react';
+import { FC, useState } from 'react';
 import { Navbar, FormInput, Todos } from './components';
 import './index.css';
 
 
 export const App: FC = () => {
   const [todosList, setTodosList] = useState<string[]>([]);
-
-  useEffect(() => {
-    console.log(todosList);
-  }, [todosList]);
 
   return (
     <div className="app">
